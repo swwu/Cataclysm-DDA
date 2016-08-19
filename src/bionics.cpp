@@ -125,6 +125,10 @@ static const bionic_id bio_teleport( "bio_teleport" );
 static const bionic_id bio_torsionratchet( "bio_torsionratchet" );
 static const bionic_id bio_water_extractor( "bio_water_extractor" );
 
+// hax stuff
+static const bionic_id bio_endoskeleton( "bio_endoskeleton" );
+static const bionic_id bio_nanite_armor( "bio_nanite_armor" );
+
 static const efftype_id effect_assisted( "assisted" );
 static const efftype_id effect_asthma( "asthma" );
 static const efftype_id effect_bleed( "bleed" );
@@ -1158,6 +1162,9 @@ bool Character::activate_bionic( bionic &bio, bool eff_only, bool *close_bionics
             bio.powered = false;
             return false;
         }
+    } else if (bio.id == bio_endoskeleton) {
+        add_msg(m_good, _("Your endoskeletal servomotors audibly hum with extra power."));
+        sounds::sound( pos(), 4, sounds::sound_t::activity, _( "whirrrrr!" ) );
     } else {
         add_msg_activate();
 
@@ -1738,6 +1745,12 @@ void Character::process_bionic( bionic &bio )
     } else if( bio.id == afs_bio_dopamine_stimulators ) {
         // Aftershock
         add_morale( morale_feeling_good, 20, 20, 30_minutes, 20_minutes, true );
+    } else if( bio.id == bio_nanite_armor ) {
+        for( const bodypart_id bp : get_all_body_parts() ) {
+            if( one_in( 10 ) ) {
+                remove_effect( effect_bleed, bp );
+            }
+        }
     }
 }
 

@@ -1,0 +1,31 @@
+[
+{
+    "type": "MOD_INFO",
+    "ident": "No_Zombies_I_Dont_Like",
+    "name": "No Zombies I Don't Like",
+    "author": ["swwu"],
+    "description": "Removes all zombies I don't like from the game.",
+    "category": "item_exclude",
+    "dependencies": [ "dda" ]
+},{
+    "type": "MONSTER_BLACKLIST",
+    "monsters": [
+      "mon_dog_zombie_rot",
+      "mon_dog_zombie_cop",
+      "mon_dog_skeleton",
+      "mon_zhark",
+      "mon_zombear",
+      "mon_zombie_dog",
+      "mon_zombie_pig",
+      "mon_zolf",
+      "mon_zoose",
+      "mon_zougar",
+
+      "mon_zombie_hollow",
+      "mon_zombie_shady",
+
+      "mon_zombie_necro",
+      "mon_zombie_master"
+    ]
+}
+]

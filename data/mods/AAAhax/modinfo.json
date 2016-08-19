@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "aaa_hax",
+    "name": "Hax Mod",
+    "authors": [ "meh" ],
+    "description": "Adds HAX",
+    "category": "misc_additions",
+    "dependencies": [ "dda" ]
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+      "type": "profession",
+      "ident": "supersoldier",
+      "name": "Supersoldier",
+      "description": "Before your escape, you were the only successful result of a secret supersoldier program that sought to combine bionics and genetic engineering to produce a perfect killing machine. You'd been laying low for months before the apocalypse happened.",
+      "points": 6,
+      "traits": [
+          "PSYCHOPATH", "WAKEFUL", "ROBUST",
+          "STR_UP_3", "DEX_UP_3", "PER_UP_3",
+          "INT_UP_2",
+          "FAST_REFLEXES",
+          "GOODCARDIO2",
+          "FASTHEALER2", "TOUGH3",
+          "NIGHTVISION3", "INFRARED",
+          "PRETTY", "GOODHEARING",
+          "PAINREC3", "POISRESIST", "DISRESISTANT", "INFRESIST"
+      ],
+      "CBMs":[
+          "bio_nanite_armor",
+          "bio_endoskeleton",
+          "bio_laser",
+          "bio_particle",
+          "bio_tools",
+          "bio_speed",
+          "bio_adrenaline",
+          "bio_eye_optic",
+          "bio_sunglasses",
+          "bio_antimatter",
+          "bio_purifier",
+          "bio_targeting",
+          "bio_heatsink",
+          "bio_climate",
+          "bio_geiger",
+          "bio_ears",
+          "bio_memory",
+          "bio_metabolics",
+          "bio_uncanny_dodge",
+          "bio_gills",
+          "bio_evap",
+          "bio_nanobots",
+          "bio_ups",
+          "bio_storage",
+          "bio_str_enhancer",
+          "bio_dex_enhancer",
+          "bio_eye_enhancer",
+          "bio_int_enhancer",
+          "bio_power_storage_mkII",
+          "bio_power_storage_mkII",
+          "bio_power_storage_mkII",
+          "bio_power_storage_mkII",
+          "bio_power_storage_mkII",
+          "bio_power_storage_mkII"
+      ],
+      "skills": [
+
+          {
+              "level": 8,
+              "name": "gun"
+          },
+          {
+              "level": 6,
+              "name": "rifle"
+          },
+          {
+              "level": 6,
+              "name": "smg"
+          },
+          {
+              "level": 6,
+              "name": "pistol"
+          },
+          {
+              "level": 8,
+              "name": "cutting"
+          },
+          {
+              "level": 8,
+              "name": "melee"
+          },
+          {
+              "level": 6,
+              "name": "bashing"
+          },
+          {
+              "level": 6,
+              "name": "stabbing"
+          },
+          {
+              "level": 6,
+              "name": "unarmed"
+          },
+          {
+              "level": 6,
+              "name": "dodge"
+          },
+          {
+              "level": 2,
+              "name": "firstaid"
+          },
+          {
+              "level": 2,
+              "name": "survival"
+          },
+          {
+              "level": 1,
+              "name": "swimming"
+          },
+          {
+              "level": 1,
+              "name": "cooking"
+          },
+          {
+              "level": 1,
+              "name": "fabrication"
+          }
+      ],
+      "items": {
+          "both": [
+              "id_military",
+              "jacket_windbreaker",
+              "tshirt",
+              "jeans",
+              "socks",
+              "lowtops",
+              "runner_bag"
+          ],
+          "male": [
+              "briefs"
+          ],
+          "female": [
+              "sports_bra",
+              "boy_shorts"
+          ]
+      },
+      "flags" : ["SCEN_ONLY"]
+  },
+  {
+    "type": "scenario",
+    "ident": "supersoldier",
+    "name": "Supersoldier",
+    "points" : 0,
+    "description": "",
+    "start_name": "Shelter",
+    "professions" : ["supersoldier"],
+    "allowed_locs": [ "sloc_military_base_warehouse" ]
+  }
+]
