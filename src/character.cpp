@@ -4178,6 +4178,14 @@ void Character::reset_stats()
     mod_per_bonus( get_mod_stat_from_bionic( character_stat::PERCEPTION ) );
     mod_int_bonus( get_mod_stat_from_bionic( character_stat::INTELLIGENCE ) );
 
+    if (has_bionic( bionic_id("bio_endoskeleton") )) {
+        mod_speed_bonus(20);
+    }
+    if (has_active_bionic( bionic_id("bio_endoskeleton") )) {
+        mod_str_bonus(200);
+        mod_speed_bonus(80);
+    }
+
     // Trait / mutation buffs
     mod_str_bonus( std::floor( mutation_value( "str_modifier" ) ) );
     mod_dodge_bonus( std::floor( mutation_value( "dodge_modifier" ) ) );

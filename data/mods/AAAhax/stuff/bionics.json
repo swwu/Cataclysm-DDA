@@ -1,0 +1,168 @@
+[
+  {
+    "id": "bio_endoskeleton",
+    "type": "BIONIC_ITEM",
+    "copy-from": "bionic_general",
+    "name": "Adamantine Endoskeleton CBM",
+    "description": "An adamantine endoskeleton."
+  },
+  {
+    "type": "bionic",
+    "id": "bio_endoskeleton",
+    "name": "Adamantine Endoskeleton",
+    "act_cost": "50 kJ",
+    "react_cost": "50 kJ",
+    "time": 1,
+    "description": "Your skeleton and muscles have been replaced by a mechanized endoskeleton, providing you with far greater strength and speed than baseline humans. It can be activated for a further burst of strength. It also provides an interface to allow the easy installation of additional bionics.",
+    "occupied_bodyparts": [
+      [ "HEAD", -4 ],
+      [ "EYES", -2 ],
+      [ "MOUTH", -2 ],
+      [ "TORSO", -30 ],
+      [ "ARM_L", -8 ],
+      [ "ARM_R", -8 ],
+      [ "HAND_L", -3 ],
+      [ "HAND_R", -3 ],
+      [ "LEG_L", -10 ],
+      [ "LEG_R", -10 ],
+      [ "FOOT_L", -5 ],
+      [ "FOOT_R", -5 ]
+    ],
+    "stat_bonus": [ [ "STR", 10 ], [ "DEX", 4 ] ],
+    "flags": [ "BIONIC_TOGGLED", "BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "id": "bio_nanite_armor",
+    "type": "BIONIC_ITEM",
+    "copy-from": "bionic_general",
+    "name": "Nanite Dermal Weave CBM",
+    "description": "A nanite dermal weave.",
+    "occupied_bodyparts": [
+      [ "torso", 2 ],
+      [ "head", 1 ],
+      [ "arm_l", 1 ],
+      [ "arm_r", 1 ],
+      [ "hand_l", 0 ],
+      [ "hand_r", 0 ],
+      [ "leg_l", 1 ],
+      [ "leg_r", 1 ],
+      [ "foot_l", 0 ],
+      [ "foot_r", 0 ]
+    ],
+    "bash_protec": [
+      [ "torso", 8 ],
+      [ "head", 8 ],
+      [ "arm_l", 8 ],
+      [ "arm_r", 8 ],
+      [ "hand_l", 8 ],
+      [ "hand_r", 8 ],
+      [ "leg_l", 8 ],
+      [ "leg_r", 8 ],
+      [ "foot_l", 8 ],
+      [ "foot_r", 8 ]
+    ],
+    "cut_protec": [
+      [ "torso", 20 ],
+      [ "head", 20 ],
+      [ "arm_l", 20 ],
+      [ "arm_r", 20 ],
+      [ "hand_l", 20 ],
+      [ "hand_r", 20 ],
+      [ "leg_l", 20 ],
+      [ "leg_r", 20 ],
+      [ "foot_l", 20 ],
+      [ "foot_r", 20 ]
+    ],
+    "bullet_protec": [
+      [ "torso", 20 ],
+      [ "head", 20 ],
+      [ "arm_l", 20 ],
+      [ "arm_r", 20 ],
+      [ "hand_l", 20 ],
+      [ "hand_r", 20 ],
+      [ "leg_l", 20 ],
+      [ "leg_r", 20 ],
+      [ "foot_l", 20 ],
+      [ "foot_r", 20 ]
+    ]
+  },
+  {
+    "type": "bionic",
+    "id": "bio_nanite_armor",
+    "name": "Nanite Dermal Weave",
+    "description": "Your skin is reinforced by a self-assembling and self-repairing nanofiber microstructure, providing superlative protection from trauma, as well has thermal, acid, and electrical resistance, at no cost to mobility. The nanites' self-repair abilities can stop bleeding but is unable to repair major tissue damage.",
+    "flags": [ "BIONIC_SHOCKPROOF" ]
+  },
+  {
+    "type": "GENERIC",
+    "//": "pseudo item, used as fuel type for CBMs that are antimatter-powered",
+    "id": "fake_antimatter",
+    "symbol": "?",
+    "color": "white",
+    "name": "antimatter",
+    "name_plural": "none",
+    "description": "seeing this is a bug",
+    "stackable": true,
+    "price": 0,
+    "volume": 0,
+    "flags": [ "PSEUDO", "PERPETUAL" ],
+    "fuel": { "energy": 3 }
+  },
+  {
+    "id": "bio_antimatter",
+    "type": "BIONIC_ITEM",
+    "copy-from": "bionic_general",
+    "name": "Antimatter Microreactor CBM",
+    "description": "An antimatter reactor."
+  },
+  {
+    "type": "bionic",
+    "id": "bio_antimatter",
+    "name": "Antimatter Microreactor",
+    "occupied_bodyparts": [
+      [ "TORSO", 20 ]
+    ],
+    "fuel_options": [ "fake_antimatter" ],
+    "passive_fuel_efficiency": 1,
+    "time": 1,
+    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_SHOCKPROOF" ],
+    "description": "In your chest is a miniaturized matter-antimatter reactor assembly that provides almost limitless power."
+  },
+  {
+    "id": "bio_particle_gun",
+    "type": "GUN",
+    "name": { "str": "particle gun finger" },
+    "description": "this a pseudo item",
+    "volume": "3 L",
+    "price": 0,
+    "material": [ "steel", "plastic" ],
+    "symbol": "(",
+    "looks_like": "v29",
+    "color": "magenta",
+    "skill": "pistol",
+    "range": 30,
+    "ranged_damage": { "damage_type": "stab", "amount": 22, "armor_penetration": 60 },
+    "dispersion": 10,
+    "durability": 10,
+    "loudness": 20,
+    "ammo_effects": [ "PLASMA", "EXPLOSIVE_SMALL", "FLAME", "EMP"],
+    "flags": [ "NEVER_JAMS", "TRADER_AVOID", "FIRESTARTER", "USES_BIONIC_POWER", "ZERO_WEIGHT" ]
+  },
+  {
+    "id": "bio_particle",
+    "type": "BIONIC_ITEM",
+    "copy-from": "bionic_general",
+    "name": "Particle Beam CBM",
+    "description": "A finger-mounted experimental plasma cannon."
+  },
+  {
+    "id": "bio_particle",
+    "type": "bionic",
+    "name": { "str": "Finger-Mounted Particle Cannon" },
+    "description": "One of your fingers has an experimental miniaturized plasma cannon embedded in it. It is highly accurate and has great destructive power, but drains an incredible amount of power.",
+    "occupied_bodyparts": [ [ "hand_r", 1 ] ],
+    "act_cost": "300 kJ",
+    "fake_item": "bio_particle_gun",
+    "flags": [ "BIONIC_GUN" ]
+  }
+]

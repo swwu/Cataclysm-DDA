@@ -180,6 +180,9 @@ static const bionic_id bio_water_extractor( "bio_water_extractor" );
 static const bionic_id bio_tools_extend( "bio_tools_extend" );
 // Aftershock stuff!
 static const bionic_id afs_bio_dopamine_stimulators( "afs_bio_dopamine_stimulators" );
+// hax stuff
+static const bionic_id bio_endoskeleton( "bio_endoskeleton" );
+static const bionic_id bio_nanite_armor( "bio_nanite_armor" );
 
 static const trait_id trait_CENOBITE( "CENOBITE" );
 static const trait_id trait_DEBUG_BIONICS( "DEBUG_BIONICS" );
@@ -1013,6 +1016,9 @@ bool Character::activate_bionic( int b, bool eff_only, bool *close_bionics_ui )
             bio.powered = false;
             return false;
         }
+    } else if (bio.id == bio_endoskeleton) {
+        add_msg(m_good, _("Your endoskeletal servomotors audibly hum with extra power."));
+        sounds::sound( pos(), 4, sounds::sound_t::activity, _( "whirrrrr!" ) );
     } else {
         add_msg_activate();
     }
@@ -1754,6 +1760,12 @@ void Character::process_bionic( const int b )
     } else if( bio.id == afs_bio_dopamine_stimulators ) {
         // Aftershock
         add_morale( MORALE_FEELING_GOOD, 20, 20, 30_minutes, 20_minutes, true );
+    } else if( bio.id == bio_nanite_armor ) {
+        for( const bodypart_id bp : get_all_body_parts() ) {
+            if( one_in( 10 ) ) {
+                remove_effect( effect_bleed, bp );
+            }
+        }
     }
 }
 
